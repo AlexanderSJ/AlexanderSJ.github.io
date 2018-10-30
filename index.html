@@ -1,6 +1,10 @@
 <html>
 <head>
   <style>
+  body {
+    padding:0;
+    margin:0;
+  }
     ul {
       list-style-type: none;
       margin:0;
@@ -15,6 +19,11 @@
       text-align: center;
       padding: 14px 16px;
     }
+    li:hover{
+      color:black;
+      background:white;
+    }
+
     img.profile {
       display: block;
       border-radius:50%;
@@ -27,7 +36,7 @@
     }
 
     .content {
-      padding: 16px;
+      padding: 0px;
       background:#EEEEEE;
       margin:auto;
       border:0px;
@@ -42,7 +51,7 @@
     }
 
     .sticky + .content {
-      padding-top: 60px;
+      padding-top: 44px;
     }
 
     .header {
@@ -53,14 +62,22 @@
     .project {
       border-style: solid;
       border-color: #000000;
-      border-width: 2px;
+      border-width: 0px;
       padding: 0px;
-      margin-bottom: 25px;
       margin-left: auto;
       margin-right: auto;
-      height: 150px;
-      width: 600px;
+      height: 500px;
     }
+
+    .projectBanner{
+      display:block;
+      background: #333;
+      color: #FFF;
+      height:35px;
+      padding-left: 16px;
+      padding-top: 16px;
+    }
+
   </style>
 
 </head>
@@ -71,22 +88,28 @@
   </div>
   <div id="navbar">
     <ul>
-      <li>About</li>
-      <li>Projects</li>
+      <li id="home"><button type="button">Home</button></li>
+      <li id="about">About</li>
+      <li id="portfolio">Portfolio</li>
+      <li id="pet_projects">Personal Projects</li>
     </ul>
   </div>
   <div class="content" style="">
     <div id="projects">
       <div class="project">
-        <div style="background:#333; height:25px; color:#FFF; padding-left: 5px">Project 1</div>
+        <div class="projectBanner">Project 1</div>
       </div>
-      <div class="project"></div>
-      <div class="project"></div>
+      <div class="project">
+        <div class="projectBanner">Project 2</div>
+      </div>
+      <div class="project">
+        <div class="projectBanner">Project 3</div>
+      </div>
     </div>
   </div>
 
   <script>
-      window.onscroll= function() {
+      window.onscroll = function() {
         stickyNav()
       };
 
