@@ -6,6 +6,11 @@
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Alexander Jonic</title>
   <style>
     html, body {
@@ -35,6 +40,128 @@
       background-color: #ccc;
       width: 75%;
     }
+
+    .card .card-block .card-title {
+      color:#FFF;
+    }
+
+    .card {
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border: none;
+      -webkit-transition: .5s all ease;
+      -moz-transition: .5s all ease;
+      transition: .5s all ease;
+      background-color:#343a40;
+    }
+
+    .card:hover {
+      -webkit-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+      -moz-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+      box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+    }
+
+    .card .card-block {
+      padding-left: 72px;
+      position: relative;
+    }
+
+    .card .card-block a {
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .card .card-block:before {
+      position: absolute;
+      font-size:39px;
+      color: #007b5e;
+      left: 0;
+      -webkit-transition: -webkit-transform .2s ease-in-out;
+      transition:transform .2s ease-in-out;
+    }
+
+    .card .block-1:before {
+      content:"";
+      width:64px;
+      height:64px;
+      background-image: url("content/languages_icon.png");
+      background-size: 64px 64px;
+      background-repeat: no-repeat;
+    }
+
+    .card .block-2:before {
+      content:"";
+      width:64px;
+      height:64px;
+      background-image: url("content/tools_icon.png");
+      background-size: 64px 64px;
+      background-repeat: no-repeat;
+    }
+
+    .card .block-3:before {
+      content:"";
+      width:64px;
+      height:64px;
+      background-image: url("content/technologies_icon.png");
+      background-size: 64px 64px;
+      background-repeat: no-repeat;
+    }
+
+    .card .block-4:before {
+      content:"";
+      width:64px;
+      height:64px;
+      background-image: url("content/pke_icon.png");
+      background-size: 64px 64px;
+      background-repeat: no-repeat;
+    }
+
+    .card .block-5:before {
+      content:"";
+      width:64px;
+      height:64px;
+      background-image: url("content/ball_a.png");
+      background-size: 64px 64px;
+      background-repeat: no-repeat;
+    }
+
+    .card .block-6:before {
+      content:"";
+      width:64px;
+      height:64px;
+      background-image: url("content/dreamcast_icon.png");
+      background-size: 64px 64px;
+      background-repeat: no-repeat;
+    }
+
+    .card .block-7:before {
+      content:"";
+      width:64px;
+      height:64px;
+      background-image: url("content/bunbot_icon.png");
+      background-size: 64px 64px;
+      background-repeat: no-repeat;
+    }
+
+    .card:hover .card-block:before {
+      /*transform: rotateY(360deg);
+      transition: 1s all ease;
+      */
+
+      -webkit-animation: rotate-icon 1.5s infinite linear;
+
+    }
+
+    @-webkit-keyframes rotate-icon {
+      from{
+        -webkit-transform:rotateY(0deg);
+      }
+      to {
+        -webkit-transform:rotateY(359deg);
+      }
+    }
+
+
   </style>
 </head>
 <body>
@@ -95,34 +222,51 @@
     <div class="container-fluid section" style="background-color:#343a40; height:100%; color:#FFF;">
       <h3 class="section-header offset-md-3">Information</h3>
       <hr/>
-      <div style="padding-top: 50px; padding-bottom: 100px;">
-        <div class="row">
-          <!-- Skills -->
-          <div class="col-md-3 ml-md-auto" style="border-right: 1px solid #CCC;">
-            <h2 class="section-header">Skills</h2>
-
-            <p><b>Languages</b>
-              <br/>
-              C++, C#, Python, Java, x86 Assembly
-              <br/>
-            </p>
-            <p><b>Tools</b>
-              <br/>
-              Unity, Unreal Engine 4, Visual Studio
-            </p>
-            <p><b>Technologies</b><br/>
-            OpenGL, WebGL, Mono, MySQL
-            <br/>
+        <div class="row mt-5">
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+            <div class="card h-100">
+              <div class="card-block block-1">
+                <h3 class="card-title">Languages</h3>
+                <p class="card-text">
+                  C++, C#, Python, Java, x86 Assembly
+                </p>
+              </div>
+            </div>
           </div>
-          <!-- End Skills -->
 
-          <!-- Recent Projects -->
-          <div class="col-md-6">
-            <h2 class="section-header">Recent Projects</h2>
-            <div class="row">
-              <div class="col">
-                <p>Phase: KYPHOTIC - Echelon
-                  <br/>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+            <div class="card h-100">
+              <div class="card-block block-2">
+                <h3 class="card-title">Tools</h3>
+                <p class="card-text">
+                  Unity, Unreal Engine 4, Visual Studio
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+            <div class="card h-100">
+              <div class="card-block block-3">
+                <h3 class="card-title">Technologies</h3>
+                <p class="card-text">
+                  OpenGL, WebGL, Mono, MySQL, Git, Subversion
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-5 mb-5">
+          <div class="col-md-4">
+            <div class="card h-100">
+              <div class="card-block block-4">
+                <h3 class="card-title">phase: KYPHOTIC - Echelon</h3>
+                <p class="card-text">
+                  A cyberpunk-themed, twin-stick shooter created in Unreal Engine 4 for my Software Engineering Capstone.
+                </p>
+                <p>
+                  Tags:
                   <span class="badge badge-primary">Blueprints</span>
                   <span class="badge badge-primary">UE4</span>
                   <span class="badge badge-primary">Multiplayer</span>
@@ -130,38 +274,78 @@
                   <span class="badge badge-primary">Windows</span>
                   <span class="badge badge-primary">Mac</span>
                 </p>
+                <a href="#" class="btn btn-primary btn-sm" rolw="button">Read More<i class="fa fa-angle-double-right ml-2"></i></a>
+              </div>
+            </div>
+          </div>
 
-                <p>Duane's Great Adventures (Pong)
-                  <br/>
+          <div class="col-md-4">
+            <div class="card h-100">
+              <div class="card-block block-5">
+                <h3 class="card-title">Duane's Great Adventure (Pong)</h3>
+                <p class="card-text">
+                  A pong clone featuring an 80s vaporwave aesthetic, and a certain dancing internet sensation. Created for my Video Game Programming course, using Webfoot Technologies' Frog engine.
+                </p>
+                <p>
+                  Tags:
                   <span class="badge badge-primary">C++</span>
                   <span class="badge badge-primary">Proprietary Engine</span>
                   <span class="badge badge-primary">Singleplayer</span>
                   <span class="badge badge-primary">Game</span>
                   <span class="badge badge-primary">Windows</span>
                 </p>
-                <p>SEGA Dreamcast OpenGL Demo
-                  <br/>
+                <a href="#" class="btn btn-primary btn-sm" rolw="button">Read More<i class="fa fa-angle-double-right ml-2"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card h-100">
+              <div class="card-block block-6">
+                <h3 class="card-title">SEGA Dreamcast OpenGL Demo</h3>
+                <p class="card-text">
+                  A small demostration of loading and rendering objects 3D objects on the SEGA Dreamcast hardware using OpenGL and C++.
+                </p>
+                <p>
+                  Tags:
                   <span class="badge badge-primary">C/C++</span>
                   <span class="badge badge-primary">OpenGL</span>
                   <span class="badge badge-primary">3D</span>
                   <span class="badge badge-primary">Dreamcast</span>
                   <span class="badge badge-primary">Demo</span>
                 </p>
+                <a href="#" class="btn btn-primary btn-sm" rolw="button">Read More<i class="fa fa-angle-double-right ml-2"></i></a>
               </div>
-              <div class="col">
-                <p>Bunbot
-                  <br/>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row mt-5">
+
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-block block-7">
+                <h3 class="card-title">Bunbot</h3>
+                <p class="card-text">
+                  A chat bot written in Python, designed to assist in administrating and entertaining chat rooms for Picarto.TV's livestreaming service.
+                </p>
+                <p>
+                  Tags:
                   <span class="badge badge-primary">Python</span>
                   <span class="badge badge-primary">Picarto</span>
                   <span class="badge badge-primary">Plugins</span>
                   <span class="badge badge-primary">Chat Bot</span>
                 </p>
+                <a href="#" class="btn btn-primary btn-sm" rolw="button">Read More<i class="fa fa-angle-double-right ml-2"></i></a>
               </div>
             </div>
           </div>
-          <!-- End Recent Project -->
+
         </div>
+
       </div>
+
     </div>
     <!-- End Section 2 -->
     <div class="container-fluid section" style="background-color:#FFF; height: 100%;">
@@ -191,9 +375,6 @@
   <!-- End HTML -->
   </div>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
 </body>
 </html>
