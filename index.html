@@ -10,6 +10,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
+  <script src="js/mouse_control.js"></script>
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="stylesheets/style.css">
 
@@ -21,7 +23,12 @@
     <!-- Header -->
     <section>
       <div class="d-flex flex-row justify-content-center align-items-center" align="center" style="margin: 15px 0px;">
-        <div class="p-2"><img src="content/alex_profile.jpg" class="img-fluid mx-auto profile-pic" alt="Alexander Jonic"></div>
+        <div class="p-2">
+          <div style="position:relative;">
+            <img src="content/bubs/bub1.png" id="bub" style="position:absolute; width: 200px; height: 200px;left:-125px; top:-15px; visibility:hidden;pointer-events:none">
+            <img src="content/alex_profile.jpg" class="img-fluid mx-auto profile-pic" alt="Alexander Jonic" id="profile_picture" onmouseover="onMouseOver()" onmouseout="onMouseOut()" style="display:inline">
+          </div>
+        </div>
         <div class="p-2">
           <h1 style="margin:auto;">Alexander Jonic</h1>
           <hr/>
@@ -165,7 +172,7 @@
                       <span class="badge badge-primary">Windows</span>
                       <!-- <span class="badge badge-primary">Mac</span> -->
                     </p>
-                    <a href="portfolio.html#pke" class="btn btn-primary btn-sm" rolw="button">Read More<i class="fa fa-angle-double-right ml-2"></i></a>
+                    <a href="portfolio.html#pke" class="btn btn-primary btn-sm" role="button">Read More<i class="fa fa-angle-double-right ml-2"></i></a>
                   </div>
                 </div>
               </div>
